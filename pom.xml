@@ -7,8 +7,7 @@
 		<version>1.0.0.RELEASE</version>
 	</parent>
 	<version>0.0.1.RELEASE</version>
-	<groupId>com.siebre</groupId>
-	<artifactId>siebre-wechat</artifactId>
+	<artifactId>BaiduApp</artifactId>
 
 	<dependencies>
 		<!--
