@@ -1,0 +1,38 @@
+<div class="evaluationContent" ng-controller="evaluationController">
+    <form class="form-inline" name="evaluationForm" ng-submit="submitForm()">
+        <div class="evaluationRowSplit">
+        </div>
+        <div class="form-group">
+            <h2>请输入手机号:</h2>
+            <input name="mobile" ng-model="mobile" type="text" class="form-control evaluationContentInputText" required>
+            <h4 ng-show="evaluationForm.mobile.$dirty && evaluationForm.mobile.$invalid" class="has-error">请输入手机号!</h4>
+        </div>
+        <div class="form-group">
+            <h2>请输入姓名:</h2>
+            <input name="username" ng-model="username" type="text" class="form-control evaluationContentInputText" required>
+            <h4 ng-show="evaluationForm.username.$dirty && evaluationForm.username.$invalid" class="has-error">请输入姓名!</h4>
+        </div>
+        <div class="evaluationRowSplit">
+        </div>
+        <div class="form-group">
+            <input type="submit" class="weui-btn weui-btn_primary evaluationButton"
+                   ng-disabled="evaluationForm.mobile.$dirty && evaluationForm.mobile.$invalid
+                   || evaluationForm.username.$dirty && evaluationForm.username.$invalid">
+        </div>
+        <div class="evaluationRowSplit">
+        </div>
+        <div class="form-group" ng-model="messageObject" ng-init="messageObject={messageTitle : '评估结果为0-100分!', message : '', messageClass : ''}">
+            <h3 ng-class="messageObject.messageClass">{{messageObject.messageTitle}}</h3>
+            <h3 ng-class="messageObject.messageClass">{{messageObject.message}}</h3>
+        </div>
+    </form>
+    <div ng-show="mask" class="mask" ng-model="process" ng-init="mask=false">
+        <div>
+            <div class="weui-mask_transparent"></div>
+            <div class="weui-toast">
+                <i class="weui-loading weui-icon_toast"></i>
+                <p class="weui-toast__content">评估中。。。</p>
+            </div>
+        </div>
+    </div>
+</div>

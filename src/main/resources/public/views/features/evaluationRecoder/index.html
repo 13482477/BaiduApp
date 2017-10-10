@@ -1,0 +1,53 @@
+<div ng-controller="evaluationRecoderController" class="evaluationRecodersContainer">
+    <div class="rowStyle" ng-repeat="evaluation in evaluations">
+        <div class="cell-60">
+            <p>
+                <label>手机号：{{evaluation.mobile}}</label>
+            </p>
+        </div>
+        <div class="cell-40">
+            <p>
+                <label>客户名称：{{evaluation.username}}</label>
+            </p>
+        </div>
+        <div class="cell-50">
+            <p>
+                分值：{{evaluation.score}}
+            </p>
+        </div>
+        <div class="cell-50">
+            <p>
+                评估日期：{{evaluation.createDate}}
+            </p>
+        </div>
+        <div class="cell-100">
+            <p>
+                支付单编号：{{evaluation.orderNumber}}
+            </p>
+        </div>
+        <div class="cell-60">
+            <p>
+               支付金额：{{evaluation.paymentAmount}}
+            </p>
+        </div>
+        <div class="cell-40">
+            <p>
+                支付状态：{{evaluation.paymentStatus}}
+            </p>
+        </div>
+        <div class="cell-20">
+            <label style="margin-top: 13px;">评价：</label>
+        </div>
+        <div class="cell-80">
+            <ul>
+                <li><a href="javascript:void(0);"><img src="/images/face-cry.png" width="40px" height="40px"></a></li>
+                <li><a href="javascript:void(0);"><img src="/images/face.png" width="40px" height="40px"></a></li>
+                <li><a href="javascript:void(0);"><img src="/images/face-smile.png" width="40px" height="40px"></a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+</div>
