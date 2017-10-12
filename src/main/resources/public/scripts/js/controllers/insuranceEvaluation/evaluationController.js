@@ -18,7 +18,8 @@ define(
                     url : '/api/v1/evaluation/evaluate',
                     data : {
                         username : $scope.username,
-                        mobile : $scope.mobile
+                        mobile : $scope.mobile,
+                        openId : '123'
                     }
                 }).then(function successCallback(response) {
                     $scope.mask = false;
@@ -29,6 +30,10 @@ define(
                             response.data.data.score +
                             '分，在所有的评分记录中，处在了前10%的位置，属于高意图用户！';
                         $scope.messageObject.messageClass = 'highlight';
+                    }
+                    else {
+                    	$scope.messageObject.messageClass = 'highlight';
+                    	$scope.messageObject.title = response.data.returnMessage;
                     }
                 }, function errorCallback(response) {
                     $scope.mask = false;
